@@ -19,6 +19,10 @@
                   <br>
                    <button class="btn" type='submit'>Update Student</button>
               </form>
+              <form action="/deletestudent/{{ student.getId }}" method="post">
+                  <input name="_method" type="hidden" value="delete">
+                  <button class="btn" type='submit'>Delete Student</button>
+              </form>
           </div>
           <div class="col-md-4">
               <h3>Courses {{ student.getName }} is enrolled in:</h3>
@@ -32,7 +36,7 @@
           </div>
           <div class="col-md-4">
               <h3>Add Course</h3>
-              <form action="/add_student_course" method="post">
+              <form action="/add_course_student" method="post">
                   <input id="student_id" name="student_id" type="hidden" value="{{ student.getId }}">
                   <label for='course_id'>Select a Course</label>
                   <select class="form-control" id='course_id' name='course_id' type='text'>
