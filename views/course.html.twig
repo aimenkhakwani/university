@@ -9,8 +9,8 @@
   <body>
       <div class="container">
           <h1>University Registration: Courses</h1>
-          <h2>Course Name: {{ course.getName }}</h2>
-          <h2>Course Number: {{ course.getCourseNumber }}</h2>
+          <h4>Course Name: {{ course.getName }}</h4>
+          <h4>Course Number: {{ course.getCourseNumber }}</h4>
           <div class="col-md-4">
               <h3>Update Course:</h3>
               <form action="/updatecourse/{{ course.getId }}" method="post">
@@ -32,7 +32,7 @@
               {% if students is not empty %}
               <ul>
                   {% for student in students %}
-                  <li>{{ student.getName }}</li>
+                  <li><a href="/thisstudent/{{ student.getId }}">{{ student.getName }}</a></li>
                   {% endfor %}
               </ul>
               {% endif %}

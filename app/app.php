@@ -107,5 +107,14 @@
         return $app['twig']->render('students.html.twig', array('students' => Student::getAll()));
     });
 
+    $app->get("/thiscourse/{id}", function($id) use ($app) {
+        $course = Course::find($id);
+        return $app['twig']->render("course.html.twig", array('course' => $course, 'students' => $course->getStudents(), 'all_students' => Student::getAll()));
+    });
+
+    $app->get("/thisstudent/{id}", function($id) use ($app) {
+        $student = Student::find($id);
+        return $app['twig']->render('student.html.twig', array('student' => $student, 'courses' => $student->getCourses(), 'all_courses' => Course::getAll()));
+    });
     return $app;
 ?>

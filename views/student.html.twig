@@ -30,7 +30,7 @@
               {% if courses is not empty %}
               <ul>
                   {% for course in courses %}
-                  <li>{{ course.getName }}</li>
+                  <li><a href="/thiscourse/{{ course.getId }}">{{ course.getName }}</a></li>
                   {% endfor %}
               </ul>
               {% endif %}
