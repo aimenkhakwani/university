@@ -90,12 +90,12 @@
 
         function addCourse($course)
         {
-            $GLOBALS['DB']->exec("INSERT INTO students_courses (student_id, course_id) VALUES ({$this->getId()}, {$course->getId()});");
+            $GLOBALS['DB']->exec("INSERT INTO students_courses (course_id, student_id) VALUES ({$course->getId()}, {$this->getId()});");
         }
 
         function getCourses()
         {
-            $returned_courses = $GLOBALS['DB']->query("SELECT courses.* FROM students JOIN students_courses ON (students_courses.student_id = students.id) JOIN courses ON (students.id = students_courses.course_id) WHERE students.id = {$this->getId()};");
+            $returned_courses = $GLOBALS['DB']->query("SELECT courses.* FROM students JOIN students_courses ON (students_courses.student_id = students.id) JOIN courses ON (courses.id = students_courses.course_id) WHERE students.id = {$this->getId()};");
             $courses = array();
             foreach($returned_courses as $course) {
                 $name = $course['name'];

@@ -184,31 +184,31 @@
             $this->assertEquals([$test_course], $result);
         }
 
-        // function test_getCourses()
-        // {
-        //     $name = "Beginner History";
-        //     $course_number = "HIST100";
-        //     $id = null;
-        //     $test_course = new Course($name, $course_number, $id);
-        //     $test_course->save();
-        //
-        //     $name2 = "Beginner History";
-        //     $course_number2 = "HIST100";
-        //     $id = null;
-        //     $test_course2 = new Course($name2, $course_number2, $id);
-        //     $test_course2->save();
-        //
-        //     $name = "Hector";
-        //     $date = "78";
-        //     $test_student = new Student($name, $date, $id);
-        //     $test_student->save();
-        //
-        //     $test_student->addCourse($test_course);
-        //     $test_student->addCourse($test_course2);
-        //
-        //     $result = $test_student->getCourses();
-        //
-        //     $this->assertEquals([$test_course, $test_course2], $result);
-        // }
+        function test_getCourses()
+        {
+            $name = "Beginner History";
+            $course_number = "HIST100";
+            $id = null;
+            $test_course = new Course($name, $course_number, $id);
+            $test_course->save();
+
+            $name2 = "Beginner History";
+            $course_number2 = "HIST100";
+            $id = null;
+            $test_course2 = new Course($name2, $course_number2, $id);
+            $test_course2->save();
+
+            $name = "Hector";
+            $date = "78";
+            $test_student = new Student($name, $date, $id);
+            $test_student->save();
+
+            $test_student->addCourse($test_course);
+            $test_student->addCourse($test_course2);
+
+            $result = $test_student->getCourses();
+
+            $this->assertEquals([$test_course, $test_course2], $result);
+        }
     }
 ?>
