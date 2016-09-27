@@ -22,7 +22,7 @@
     ));
 
     $app->get("/", function() use ($app) {
-      return $app['twig']->render("home.html.twig");
+      return $app['twig']->render("home.html.twig", array('students' => Student::getAll(), 'courses' => Course::getAll()));
     });
 
     $app->get("/student", function() use ($app) {

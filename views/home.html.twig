@@ -10,7 +10,16 @@
       <div class="container">
           <h1>University Registration</h1>
           <div class="content">
-              <div class="col-md-4"></div>
+              <div class="col-md-4">
+                  <h3>Students:</h3>
+                  {% if students is not empty %}
+                  <ul>
+                    {% for student in students %}
+                    <li><a href="/thisstudent/{{ student.getId }}">{{ student.getName }}</a></li>
+                    {% endfor %}
+                    </ul>
+                  {% endif %}
+              </div>
               <div class="col-md-4">
                   <br>
                   <form action="/student" method="get">
@@ -20,7 +29,16 @@
                       <button class="btn btn-lg btn-primary" type="submit">Courses</button>
                   </form>
               </div>
-              <div class="col-md-4"></div>
+              <div class="col-md-4">
+                  <h3>Courses:</h3>
+                  {% if courses is not empty %}
+                  <ul>
+                    {% for course in courses %}
+                    <li><a href="/thiscourse/{{ course.getId }}">{{ course.getName }}</a></li>
+                    {% endfor %}
+                    </ul>
+                  {% endif %}
+              </div>
           </div>
       </div>
   </body>
