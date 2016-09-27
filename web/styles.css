@@ -1,7 +1,16 @@
 body{
     text-align: center;
+    font-family: 'Open Sans', sans-serif;
 }
 li {
     list-style-type: none;
     margin-right: 40px;
+    /*font-size: 20px;*/
+}
+h1 {
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+.content {
+    margin-top: 35px;
 }
