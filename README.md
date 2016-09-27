@@ -6,7 +6,9 @@
 
 ## Description
 
-_Add and update students and courses to create a schedule overview._
+A web app to register courses and students to a university. Demonstrates MySQL many-to-many relationship.
+
+<img src="screenshot.png" alt="a screenshot of the site">
 
 ## Setup/Installation Requirements
 
