@@ -1,21 +1,12 @@
-# _{Application Name}_
+# _University_
 
-#### _{Date of current version}_
+#### _9-27-16_
 
-#### By _**Martin Cartledge**_
+#### By _**Martin Cartledge &amp; Aimen Khakwani**_
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
-
-## Specifications
-
-| Behavior      | Input       |Output|
-| ------------- |-------------| -----|
-| Behavior 1 | Input 1 | Output 1 |
-| Behavior 2 | Input 2 | Output 2 |
-| Behavior 3 | Input 3 | Output 3 |
-
+_Add and update students and courses to create a schedule overview._
 
 ## Setup/Installation Requirements
 
@@ -58,16 +49,4 @@ MySQL_
 
 *This webpage is licensed under the MIT license.*
 
-Copyright (c) 2016 **_Martin Cartledge_**
-
-### Notes
-
-_Copy Directory -> Make New Directory:_
-
-`cp -r srcdirectory newdirectory`
-
-`rm -rf .git`
-
-`cd newdirectory`
-
-`git init`
+Copyright (c) 2016 **_Martin Cartledge &amp; Aimen Khakwani_**
