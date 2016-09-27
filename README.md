@@ -8,7 +8,7 @@
 
 A web app to register courses and students to a university. Demonstrates MySQL many-to-many relationship.
 
-<img src="screenshot.png" alt="a screenshot of the site">
+<img src="/screenshot.png" alt="a screenshot of the site">
 
 ## Setup/Installation Requirements
 
