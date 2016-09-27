@@ -163,37 +163,37 @@
             $this->assertEquals($new_course_number, $result);
         }
 
-        // function test_delete()
-        // {
-        //     $name = "Hector";
-        //     $date = "8";
-        //     $id = null;
-        //     $test_course = new course($name, $date, $id);
-        //     $test_course->save();
-        //
-        //     $result = $test_course->delete();
-        //
-        //     $this->assertEquals([], $test_course->getAll());
-        // }
-        //
-        // function test_find()
-        // {
-        //     $name = "Hector";
-        //     $date = "8";
-        //     $id = null;
-        //     $test_course = new course($name, $date, $id);
-        //     $test_course->save();
-        //
-        //     $name2 = "Hector";
-        //     $date2 = "8";
-        //     $id = null;
-        //     $test_course2 = new course($name2, $date2, $id);
-        //     $test_course2->save();
-        //
-        //     $find_id = $test_course2->getId();
-        //     $result = course::find($find_id);
-        //
-        //     $this->assertEquals($test_course2, $result);
-        // }
+        function test_delete()
+        {
+            $name = "Beginner History";
+            $course_number = "HIST100";
+            $id = null;
+            $test_course = new Course($name, $course_number, $id);
+            $test_course->save();
+
+            $result = $test_course->delete();
+
+            $this->assertEquals([], $test_course->getAll());
+        }
+
+        function test_find()
+        {
+            $name = "Beginner History";
+            $course_number = "HIST100";
+            $id = null;
+            $test_course = new Course($name, $course_number, $id);
+            $test_course->save();
+
+            $name2 = "Beginner History";
+            $course_number2 = "HIST100";
+            $id = null;
+            $test_course2 = new Course($name2, $course_number2, $id);
+            $test_course2->save();
+
+            $find_id = $test_course2->getId();
+            $result = Course::find($find_id);
+
+            $this->assertEquals($test_course2, $result);
+        }
     }
 ?>
