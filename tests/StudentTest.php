@@ -115,5 +115,54 @@
 
             $this->assertEquals([], $result);
         }
+
+        function test_update()
+        {
+            $name = "Hector";
+            $date = "8";
+            $id = null;
+            $test_student = new Student($name, $date, $id);
+            $test_student->save();
+
+            $new_name = "Hex";
+
+            $test_student->update($new_name);
+            $result = $test_student->getName();
+
+            $this->assertEquals($new_name, $result);
+        }
+
+        function test_delete()
+        {
+            $name = "Hector";
+            $date = "8";
+            $id = null;
+            $test_student = new Student($name, $date, $id);
+            $test_student->save();
+
+            $result = $test_student->delete();
+
+            $this->assertEquals([], $test_student->getAll());
+        }
+
+        function test_find()
+        {
+            $name = "Hector";
+            $date = "8";
+            $id = null;
+            $test_student = new Student($name, $date, $id);
+            $test_student->save();
+
+            $name2 = "Hector";
+            $date2 = "8";
+            $id = null;
+            $test_student2 = new Student($name2, $date2, $id);
+            $test_student2->save();
+
+            $find_id = $test_student2->getId();
+            $result = Student::find($find_id);
+
+            $this->assertEquals($test_student2, $result);
+        }
     }
 ?>
