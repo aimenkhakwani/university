@@ -106,7 +106,7 @@
             $this->assertEquals([$test_course, $test_course2], $result);
         }
 
-        function deleteAll()
+        function test_deleteAll()
         {
             // Assemble
             $name = "Beginner History";

@@ -6,6 +6,7 @@
     */
 
     require_once "src/Student.php";
+    require_once "src/Course.php";
 
     $server = 'mysql:host=localhost;dbname=university_test';
     $username = 'root';
@@ -17,6 +18,7 @@
         protected function tearDown()
         {
             Student::deleteAll();
+            Course::deleteAll();
         }
 
         function test_getName()
@@ -95,7 +97,7 @@
             $this->assertEquals([$test_student, $test_student2], $result);
         }
 
-        function deleteAll()
+        function test_deleteAll()
         {
             $name = "Hector";
             $date = "8";

@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="/styles.css" rel="stylesheet" type="text/css">
+    <title>University Registration</title>
+  </head>
+  <body>
+      <div class="container">
+          <h1>University Registration: Students</h1>
+          <h2>Student Name: {{ student.getName }}</h2>
+          <h2>Enroll Date: {{ student.getDate }}</h2>
+          <div class="col-md-4">
+              <h3>Update Student:</h3>
+              <form action="/updatestudent/{{ student.getId }}" method="post">
+                  <input name="_method" type="hidden" value="patch">
+                  <br>
+                  <input type="text" name="name" class="form-control" placeholder="Name">
+                  <br>
+                   <button class="btn" type='submit'>Update Student</button>
+              </form>
+          </div>
+          <div class="col-md-4">
+              <h3>Courses {{ student.getName }} is enrolled in:</h3>
+              {% if courses is not empty %}
+              <ul>
+                  {% for course in courses %}
+                  <li>{{ course.getName }}</li>
+                  {% endfor %}
+              </ul>
+              {% endif %}
+          </div>
+          <div class="col-md-4">
+              <h3>Add Course</h3>
+              <form action="/add_student_course" method="post">
+                  <input id="student_id" name="student_id" type="hidden" value="{{ student.getId }}">
+                  <label for='course_id'>Select a Course</label>
+                  <select class="form-control" id='course_id' name='course_id' type='text'>
+                    {% for course in all_courses %}
+                        <option value="{{ course.getId }}"> {{ course.getName }} </option>
+                    {% endfor %}
+                  </select>
+                   <button class="btn" type='submit'>Add Course</button>
+              </form>
+          </div>
+      </div>
+      <a href="/">Home</a>
+  </body>
+</html>

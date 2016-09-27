@@ -1,10 +1,24 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Template</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="/styles.css" rel="stylesheet" type="text/css">
+    <title>University Registration</title>
   </head>
   <body>
-      <p>hi</p>
-      <a href="/test"><button type="submit" name="button">Tester</button></a>
+      <div class="container">
+          <h1>University Registration</h1>
+          <div class="col-md-4"></div>
+          <div class="col-md-4">
+              <br>
+              <form action="/student" method="get">
+                  <button class="btn btn-lg btn-danger" type="submit">Students</button>
+              </form>
+              <form action="/course" method="get">
+                  <button class="btn btn-lg btn-primary" type="submit">Courses</button>
+              </form>
+          </div>
+          <div class="col-md-4"></div>
+      </div>
   </body>
 </html>
