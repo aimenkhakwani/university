@@ -12,21 +12,14 @@ A web app for a university registrar to register courses and students to a unive
 
 ## Setup/Installation Requirements
 
-_In Terminal:_
-
-`git clone 'URL'`
-
-`$ cd 'directory name'`
-
-`$ composer install`
-
-`$ cd web`
-
-`$ php -S localhost:8000`
-
-_In Browser:_
-
-`localhost:8000`
+* Clone the repository
+* Using the command line, navigate to the project's root directory
+* Install dependencies by running $ composer install
+* Start MySQL by running the command $ /Applications/MAMP/Library/bin/mysql --host=localhost -uroot -proot
+* Start Apache by running the command $ apachectl start
+* Import the MySQL file from localhost:8080/phpmyadmin/
+* Navigate to the /web directory and start a local server with $ php -S localhost:8000
+* Open a browser and go to the address http://localhost:8000 to view the application
 
 ## Known Bugs
 
