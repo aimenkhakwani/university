@@ -35,7 +35,6 @@ _None yet_
 ## Support and contact details
 
 _Martin Cartledge: martincartledge@icloud.com_
-_Aimen Khakwani: aimen.khakwani@hotmail.com_
 
 ## Technologies Used
 
