@@ -1,4 +1,4 @@
-# _University_
+# University Registration
 
 #### _9-27-16_
 
@@ -6,7 +6,7 @@
 
 ## Description
 
-A web app to register courses and students to a university. Demonstrates MySQL many-to-many relationship.
+A web app for a university registrar to register courses and students to a university. Demonstrates MySQL many-to-many relationship, and uses join statements. The registrar can add students and courses, as well as delete and update them (CRUD). The web app displays individual students with all the courses they are enrolled in, as well as an option to add a course to the student course. The same can be done with a course (add a student in the course or view all students enrolled in a particular course). 
 
 <img src="/web/screenshot.png" alt="a screenshot of the site">
 
